@@ -87,14 +87,14 @@ export async function startDashboard() {
         }
     });
 
-    server.listen(port, () => {
+    server.listen(port, async () => {
         console.log(`\n${c.accent}  ⚡ Dashboard running at:${c.reset}`);
         console.log(`${c.bold}  http://localhost:${port}${c.reset}\n`);
         console.log(`${c.dim}  Press Ctrl+C to stop${c.reset}\n`);
 
         // Try to open browser
-        const { exec: execCmd } = await import('child_process');
         try {
+            const { exec: execCmd } = await import('child_process');
             const cmd = process.platform === 'win32' ? 'start' :
                        process.platform === 'darwin' ? 'open' : 'xdg-open';
             execCmd(`${cmd} http://localhost:${port}`);
