@@ -1,19 +1,19 @@
-#   Zaifi Claw
+# Zaifi Claw
 
 > Minimal AI Coding Assistant — Like NanoClaw, but yours.
 
-## 🌟 Features
+## Features
 
-- 💬 AI chat in terminal — powered by Gemini (FREE)
-- 📂 Read & write files in your project
--   Execute shell commands
-- 🔍 Search across your codebase
-- 🌐 Web dashboard (`zaificlaw --ui`)
-- 📱 Telegram bot integration
-- 🔒 100% private — keys stored locally
-- 💰 $0/month — uses Gemini free tier
+- AI chat in terminal — powered by Gemini (FREE)
+- Read & write files in your project
+- Execute shell commands
+- Search across your codebase
+- Web dashboard (`zaificlaw --ui`)
+- Telegram bot integration
+- 100% private — keys stored locally
+- $0/month — uses Gemini free tier
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Install
@@ -27,7 +27,7 @@ cd my-project
 zaificlaw
 ```
 
-## 📸 Commands
+## Commands
 
 | Command | Description |
 |---------|-------------|
@@ -37,7 +37,7 @@ zaificlaw
 | `zaificlaw --setup` | Configure API keys |
 | `zaificlaw --help` | Show help |
 
-## 🎮 Chat Commands
+## Chat Commands
 
 | Command | Description |
 |---------|-------------|
@@ -50,15 +50,14 @@ zaificlaw
 | `/clear` | Clear history |
 | `/exit` | Exit |
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Runtime:** Node.js (v18+)
 - **AI:** Google Gemini API (FREE)
 - **Dashboard:** Built-in HTTP server
 - **Dependencies:** Zero (uses Node.js built-ins)
-- **Website:** Vercel (FREE)
 
-## 📁 Structure
+## Structure
 
 ```
 zaifi-claw/
@@ -74,17 +73,17 @@ zaifi-claw/
 └── dashboard/           # Web dashboard (localhost:3456)
 ```
 
-## 🔒 Security
+## Security
 
 - API keys stored in `~/.zaificlaw/config.json`
 - Never transmitted except to AI API
 - No telemetry, no tracking
 - File access limited to CWD
 
-## 📄 License
+## License
 
 MIT
 
 ---
 
-**Made with   by [Muhammad Huzaifa Qureshi](https://github.com/MuhammadHuzaifaQureshi) — for PIAIC/Panaversity**
+**Made with ⚡ by [Muhammad Huzaifa Qureshi](https://github.com/MuhammadHuzaifaQureshi)**
