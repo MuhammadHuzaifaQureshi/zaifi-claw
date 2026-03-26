@@ -1,4 +1,4 @@
-// ⚡ Zaifi Claw — Dashboard Web Server (opens on --ui)
+//   Zaifi Claw — Dashboard Web Server (opens on --ui)
 
 import { createServer } from 'http';
 import { readFileSync, existsSync } from 'fs';
@@ -88,7 +88,7 @@ export async function startDashboard() {
     });
 
     server.listen(port, async () => {
-        console.log(`\n${c.accent}  ⚡ Dashboard running at:${c.reset}`);
+        console.log(`\n${c.accent}    Dashboard running at:${c.reset}`);
         console.log(`${c.bold}  http://localhost:${port}${c.reset}\n`);
         console.log(`${c.dim}  Press Ctrl+C to stop${c.reset}\n`);
 
@@ -96,9 +96,9 @@ export async function startDashboard() {
         try {
             const { exec: execCmd } = await import('child_process');
             const cmd = process.platform === 'win32' ? 'start' :
-                       process.platform === 'darwin' ? 'open' : 'xdg-open';
+                process.platform === 'darwin' ? 'open' : 'xdg-open';
             execCmd(`${cmd} http://localhost:${port}`);
-        } catch (e) {}
+        } catch (e) { }
     });
 }
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// ⚡ Zaifi Claw — CLI Entry Point
+//   Zaifi Claw — CLI Entry Point
 // Usage:
 //   zaificlaw          → Interactive AI chat mode
 //   zaificlaw --ui     → Open web dashboard
@@ -41,6 +41,14 @@ async function main() {
         return;
     }
 
+    // --bot (Telegram Bot mode)
+    if (args.includes('--bot')) {
+        banner();
+        const { startTelegramBot } = await import('../src/telegram.js');
+        await startTelegramBot();
+        return;
+    }
+
     // Check if API key is configured
     const config = getConfig();
     if (!config.geminiApiKey && !config.claudeApiKey) {
@@ -66,7 +74,7 @@ async function main() {
 
 function showHelp() {
     console.log(`
-${c.accent}⚡ Zaifi Claw${c.reset} — AI Coding Assistant
+${c.accent}  Zaifi Claw${c.reset} — AI Coding Assistant
 
 ${c.bold}USAGE${c.reset}
   ${c.accent}zaificlaw${c.reset}              Interactive AI chat mode
@@ -84,6 +92,7 @@ ${c.bold}EXAMPLES${c.reset}
   ${c.dim}$ zaificlaw${c.reset}
   ${c.dim}$ zaificlaw "explain this codebase"${c.reset}
   ${c.dim}$ zaificlaw --ui${c.reset}
+  ${c.dim}$ zaificlaw --bot${c.reset}
 `);
 }
 

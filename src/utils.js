@@ -1,4 +1,4 @@
-// ⚡ Zaifi Claw — Terminal Utilities (Colors, Spinner, Formatting)
+//   Zaifi Claw — Terminal Utilities (Colors, Spinner, Formatting)
 
 // --- ANSI Color Codes ---
 export const c = {
@@ -32,7 +32,7 @@ export function banner() {
     console.log(`
 ${c.accent}  ╔══════════════════════════════════════╗
   ║                                      ║
-  ║   ⚡  Z A I F I  C L A W   v1.0     ║
+  ║      Z A I F I  C L A W   v1.0     ║
   ║      AI Coding Assistant             ║
   ║                                      ║
   ╚══════════════════════════════════════╝${c.reset}

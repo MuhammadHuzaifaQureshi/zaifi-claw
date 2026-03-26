@@ -1,4 +1,4 @@
-// ⚡ Zaifi Claw — Coding Tools (File I/O, Exec, Search)
+//   Zaifi Claw — Coding Tools (File I/O, Exec, Search)
 
 import { readFileSync, writeFileSync, existsSync, readdirSync, statSync, mkdirSync } from 'fs';
 import { join, relative, resolve } from 'path';
@@ -78,9 +78,9 @@ export function listFiles(dirPath = '.', depth = 2) {
                                 size: stat.size
                             });
                         }
-                    } catch (e) {}
+                    } catch (e) { }
                 }
-            } catch (e) {}
+            } catch (e) { }
         }
 
         walk(absPath, 0);
@@ -159,9 +159,9 @@ export function searchFiles(query, dirPath = '.', extensions = []) {
                                 });
                             }
                         }
-                    } catch (e) {}
+                    } catch (e) { }
                 }
-            } catch (e) {}
+            } catch (e) { }
         }
 
         search(absPath, 0);
@@ -189,7 +189,7 @@ export function getProjectInfo() {
             const pkg = JSON.parse(readFileSync(join(CWD, 'package.json'), 'utf-8'));
             info.projectName = pkg.name;
             info.version = pkg.version;
-        } catch (e) {}
+        } catch (e) { }
     }
 
     const fileList = listFiles('.', 1);

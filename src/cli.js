@@ -1,4 +1,4 @@
-// ⚡ Zaifi Claw — Interactive CLI Chat
+//   Zaifi Claw — Interactive CLI Chat
 
 import { createInterface } from 'readline';
 import { chat } from './ai.js';
@@ -50,7 +50,7 @@ export async function startCLI() {
     });
 
     rl.on('close', () => {
-        console.log(`\n${c.accent}⚡ Goodbye!${c.reset}\n`);
+        console.log(`\n${c.accent}  Goodbye!${c.reset}\n`);
         process.exit(0);
     });
 }
@@ -129,7 +129,7 @@ async function processMessage(input, rl) {
         try {
             spinner.stop();
             console.log();
-            process.stdout.write(`${c.dim}  ⚡ ${c.reset}`);
+            process.stdout.write(`${c.dim}    ${c.reset}`);
 
             fullResponse = await chat(conversationHistory, (chunk) => {
                 process.stdout.write(chunk);
@@ -192,7 +192,7 @@ function handleCommand(input, rl) {
     switch (cmd) {
         case '/help':
             console.log(`
-${c.accent}⚡ Commands${c.reset}
+${c.accent}  Commands${c.reset}
   ${c.accent}/help${c.reset}              Show this help
   ${c.accent}/clear${c.reset}             Clear conversation history
   ${c.accent}/files${c.reset}             List project files
@@ -278,7 +278,7 @@ ${c.accent}⚡ Commands${c.reset}
         case '/info':
             const info = getProjectInfo();
             console.log(`
-${c.accent}⚡ Project Info${c.reset}
+${c.accent}  Project Info${c.reset}
   ${c.dim}Directory:${c.reset} ${info.cwd}
   ${c.dim}Project:${c.reset}   ${info.projectName || 'N/A'}
   ${c.dim}Version:${c.reset}   ${info.version || 'N/A'}
@@ -290,7 +290,7 @@ ${c.accent}⚡ Project Info${c.reset}
 
         case '/exit':
         case '/quit':
-            console.log(`\n${c.accent}⚡ Goodbye!${c.reset}\n`);
+            console.log(`\n${c.accent}  Goodbye!${c.reset}\n`);
             process.exit(0);
 
         default:

@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zaifi Claw — Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="app">
         <!-- Sidebar -->
         <nav class="sidebar">
             <div class="sidebar-logo">
-                <span class="logo-icon">⚡</span>
+                <span class="logo-icon"> </span>
                 <span class="logo-text">ZAIFI<span class="accent">CLAW</span></span>
             </div>
             <ul class="nav-links">
@@ -77,7 +81,7 @@
                     <div class="card">
                         <div class="card-header">
                             <span class="card-title">AI Provider</span>
-                            <span class="card-icon">⚡</span>
+                            <span class="card-icon"> </span>
                         </div>
                         <div class="card-body">
                             <div class="provider-name" id="aiProvider">Gemini</div>
@@ -192,7 +196,8 @@
                             <p class="channel-desc">Connect your Telegram bot to chat with Zaifi Claw via Telegram.</p>
                             <div class="form-group">
                                 <label>Bot Token</label>
-                                <input type="password" id="telegramToken" placeholder="123456:ABC-DEF..." class="form-input">
+                                <input type="password" id="telegramToken" placeholder="123456:ABC-DEF..."
+                                    class="form-input">
                             </div>
                             <button class="btn btn-accent" id="saveTelegramBtn">Save & Enable</button>
                         </div>
@@ -245,11 +250,13 @@
                             <div class="form-group">
                                 <label>Gemini API Key</label>
                                 <input type="password" id="settingGeminiKey" placeholder="AIza..." class="form-input">
-                                <span class="form-hint">Get free from <a href="https://aistudio.google.com" target="_blank">aistudio.google.com</a></span>
+                                <span class="form-hint">Get free from <a href="https://aistudio.google.com"
+                                        target="_blank">aistudio.google.com</a></span>
                             </div>
                             <div class="form-group">
                                 <label>Claude API Key <span class="optional">(optional)</span></label>
-                                <input type="password" id="settingClaudeKey" placeholder="sk-ant-..." class="form-input">
+                                <input type="password" id="settingClaudeKey" placeholder="sk-ant-..."
+                                    class="form-input">
                             </div>
                             <div class="form-group">
                                 <label>Model</label>
@@ -266,7 +273,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Temperature</label>
-                                    <input type="number" id="settingTemperature" value="0.7" step="0.1" min="0" max="2" class="form-input">
+                                    <input type="number" id="settingTemperature" value="0.7" step="0.1" min="0" max="2"
+                                        class="form-input">
                                 </div>
                             </div>
                             <button class="btn btn-accent" id="saveSettingsBtn">Save Settings</button>
@@ -279,4 +287,5 @@
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>

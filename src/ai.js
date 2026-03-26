@@ -1,4 +1,4 @@
-// ⚡ Zaifi Claw — AI Module (Gemini / Claude)
+//   Zaifi Claw — AI Module (Gemini / Claude)
 
 import { getConfig } from './config.js';
 
@@ -89,7 +89,7 @@ async function callGemini(messages, config, onStream) {
                             fullText += text;
                             onStream(text);
                         }
-                    } catch (e) {}
+                    } catch (e) { }
                 }
             }
         }

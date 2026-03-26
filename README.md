@@ -1,4 +1,4 @@
-# ⚡ Zaifi Claw
+#   Zaifi Claw
 
 > Minimal AI Coding Assistant — Like NanoClaw, but yours.
 
@@ -6,7 +6,7 @@
 
 - 💬 AI chat in terminal — powered by Gemini (FREE)
 - 📂 Read & write files in your project
-- ⚡ Execute shell commands
+-   Execute shell commands
 - 🔍 Search across your codebase
 - 🌐 Web dashboard (`zaificlaw --ui`)
 - 📱 Telegram bot integration
@@ -69,9 +69,9 @@ zaifi-claw/
 │   ├── tools.js         # File I/O, exec, search
 │   ├── config.js        # Settings manager
 │   ├── server.js        # Dashboard server
+│   ├── telegram.js      # Telegram bot logic
 │   └── utils.js         # Colors, formatting
-├── dashboard/           # Web dashboard
-└── website/             # Landing page
+└── dashboard/           # Web dashboard (localhost:3456)
 ```
 
 ## 🔒 Security
@@ -87,4 +87,4 @@ MIT
 
 ---
 
-**Made with ⚡ by [Muhammad Huzaifa Qureshi](https://github.com/MuhammadHuzaifaQureshi) — for PIAIC/Panaversity**
+**Made with   by [Muhammad Huzaifa Qureshi](https://github.com/MuhammadHuzaifaQureshi) — for PIAIC/Panaversity**

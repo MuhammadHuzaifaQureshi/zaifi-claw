@@ -1,4 +1,4 @@
-// ⚡ Zaifi Claw — Dashboard Logic
+//   Zaifi Claw — Dashboard Logic
 
 const API = '';
 

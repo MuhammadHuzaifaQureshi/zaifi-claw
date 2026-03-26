@@ -1,4 +1,4 @@
-// ⚡ Zaifi Claw — Landing Page Animations
+//   Zaifi Claw — Landing Page Animations
 
 // Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -1,4 +1,4 @@
-// ⚡ Zaifi Claw — Config Manager
+//   Zaifi Claw — Config Manager
 // Stores API keys in ~/.zaificlaw/config.json
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
@@ -28,7 +28,7 @@ export function getConfig() {
             const data = JSON.parse(readFileSync(CONFIG_FILE, 'utf-8'));
             return { ...DEFAULT_CONFIG, ...data };
         }
-    } catch (e) {}
+    } catch (e) { }
     return { ...DEFAULT_CONFIG };
 }
 
@@ -58,7 +58,7 @@ export async function setup() {
 
     const ask = (q) => new Promise(resolve => rl.question(q, resolve));
 
-    console.log(`\n${c.accent}⚡ Zaifi Claw Setup${c.reset}\n`);
+    console.log(`\n${c.accent}  Zaifi Claw Setup${c.reset}\n`);
     console.log(`${c.dim}Config will be saved to: ${CONFIG_FILE}${c.reset}\n`);
 
     // Gemini API Key
