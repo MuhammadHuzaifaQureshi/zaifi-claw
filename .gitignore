@@ -25,6 +25,10 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Local deployment
+website/
+vercel.json
 *.swp
 
 # Gemini
