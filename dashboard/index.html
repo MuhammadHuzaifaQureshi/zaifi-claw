@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaifi Claw — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">ZAIFI<span class="accent">CLAW</span></span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item active" data-tab="overview">
+                    <span class="nav-icon">◉</span> Overview
+                </li>
+                <li class="nav-item" data-tab="gateway">
+                    <span class="nav-icon">⬡</span> Gateway
+                </li>
+                <li class="nav-item" data-tab="bots">
+                    <span class="nav-icon">◈</span> Channels
+                </li>
+                <li class="nav-item" data-tab="settings">
+                    <span class="nav-icon">⚙</span> Settings
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <span class="version">v1.0.0</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Top Bar -->
+            <header class="topbar">
+                <h2 id="pageTitle">Overview</h2>
+                <div class="topbar-right">
+                    <span class="status-badge" id="statusBadge">
+                        <span class="status-dot"></span> Connected
+                    </span>
+                </div>
+            </header>
+
+            <!-- Overview Tab -->
+            <section class="tab-content active" id="tab-overview">
+                <div class="cards-grid">
+                    <!-- Status Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Status</span>
+                            <span class="card-icon">◉</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="status-large" id="connectionStatus">
+                                <span class="status-indicator online"></span>
+                                <span>Connected</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Uptime</span>
+                                <span class="stat-value" id="uptime">0s</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Version</span>
+                                <span class="stat-value" id="versionDisplay">1.0.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Provider Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">AI Provider</span>
+                            <span class="card-icon">⚡</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="provider-name" id="aiProvider">Gemini</div>
+                            <div class="stat-row">
+                                <span class="stat-label">Model</span>
+                                <span class="stat-value" id="aiModel">gemini-2.0-flash</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Cost</span>
+                                <span class="stat-value accent">FREE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Project</span>
+                            <span class="card-icon">📂</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="stat-row">
+                                <span class="stat-label">Directory</span>
+                                <span class="stat-value mono" id="projectDir">—</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Name</span>
+                                <span class="stat-value" id="projectName">—</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Files</span>
+                                <span class="stat-value" id="projectFiles">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Quick Start</span>
+                            <span class="card-icon">▶</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="quick-cmd">
+                                <code>zaificlaw</code>
+                                <span class="cmd-desc">Start AI chat</span>
+                            </div>
+                            <div class="quick-cmd">
+                                <code>zaificlaw "prompt"</code>
+                                <span class="cmd-desc">Single question</span>
+                            </div>
+                            <div class="quick-cmd">
+                                <code>zaificlaw --setup</code>
+                                <span class="cmd-desc">Configure keys</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gateway Tab -->
+            <section class="tab-content" id="tab-gateway">
+                <div class="cards-grid single">
+                    <div class="card wide">
+                        <div class="card-header">
+                            <span class="card-title">Gateway Access</span>
+                            <span class="card-icon">⬡</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="gateway-info">
+                                <div class="gateway-row">
+                                    <span class="gateway-label">Local URL</span>
+                                    <div class="gateway-value-group">
+                                        <code id="gatewayUrl">http://localhost:3456</code>
+                                        <button class="copy-btn" data-copy="gatewayUrl">Copy</button>
+                                    </div>
+                                </div>
+                                <div class="gateway-row">
+                                    <span class="gateway-label">API Endpoint</span>
+                                    <div class="gateway-value-group">
+                                        <code id="apiEndpoint">http://localhost:3456/api/status</code>
+                                        <button class="copy-btn" data-copy="apiEndpoint">Copy</button>
+                                    </div>
+                                </div>
+                                <div class="gateway-row">
+                                    <span class="gateway-label">Config Path</span>
+                                    <div class="gateway-value-group">
+                                        <code id="configPath">~/.zaificlaw/config.json</code>
+                                        <button class="copy-btn" data-copy="configPath">Copy</button>
+                                    </div>
+                                </div>
+                                <div class="gateway-row">
+                                    <span class="gateway-label">Status</span>
+                                    <span class="status-pill online">Connected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Channels/Bots Tab -->
+            <section class="tab-content" id="tab-bots">
+                <div class="cards-grid">
+                    <!-- Telegram -->
+                    <div class="card channel-card">
+                        <div class="card-header">
+                            <span class="card-title">Telegram</span>
+                            <span class="channel-status" id="telegramStatus">Disabled</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="channel-desc">Connect your Telegram bot to chat with Zaifi Claw via Telegram.</p>
+                            <div class="form-group">
+                                <label>Bot Token</label>
+                                <input type="password" id="telegramToken" placeholder="123456:ABC-DEF..." class="form-input">
+                            </div>
+                            <button class="btn btn-accent" id="saveTelegramBtn">Save & Enable</button>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp (Coming Soon) -->
+                    <div class="card channel-card disabled">
+                        <div class="card-header">
+                            <span class="card-title">WhatsApp</span>
+                            <span class="channel-status">Coming Soon</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="channel-desc">WhatsApp integration is planned for a future release.</p>
+                        </div>
+                    </div>
+
+                    <!-- Discord (Coming Soon) -->
+                    <div class="card channel-card disabled">
+                        <div class="card-header">
+                            <span class="card-title">Discord</span>
+                            <span class="channel-status">Coming Soon</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="channel-desc">Discord bot integration coming soon.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slack (Coming Soon) -->
+                    <div class="card channel-card disabled">
+                        <div class="card-header">
+                            <span class="card-title">Slack</span>
+                            <span class="channel-status">Coming Soon</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="channel-desc">Slack workspace integration planned.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Tab -->
+            <section class="tab-content" id="tab-settings">
+                <div class="cards-grid single">
+                    <div class="card wide">
+                        <div class="card-header">
+                            <span class="card-title">Configuration</span>
+                            <span class="card-icon">⚙</span>
+                        </div>
+                        <div class="card-body settings-body">
+                            <div class="form-group">
+                                <label>Gemini API Key</label>
+                                <input type="password" id="settingGeminiKey" placeholder="AIza..." class="form-input">
+                                <span class="form-hint">Get free from <a href="https://aistudio.google.com" target="_blank">aistudio.google.com</a></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Claude API Key <span class="optional">(optional)</span></label>
+                                <input type="password" id="settingClaudeKey" placeholder="sk-ant-..." class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>Model</label>
+                                <select id="settingModel" class="form-input">
+                                    <option value="gemini-2.0-flash">Gemini 2.0 Flash (FREE)</option>
+                                    <option value="gemini-2.0-flash-lite">Gemini 2.0 Flash Lite (FREE)</option>
+                                    <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Max Tokens</label>
+                                    <input type="number" id="settingMaxTokens" value="2048" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label>Temperature</label>
+                                    <input type="number" id="settingTemperature" value="0.7" step="0.1" min="0" max="2" class="form-input">
+                                </div>
+                            </div>
+                            <button class="btn btn-accent" id="saveSettingsBtn">Save Settings</button>
+                            <div id="settingsMsg" class="settings-msg"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

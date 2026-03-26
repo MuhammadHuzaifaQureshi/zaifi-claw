@@ -1,0 +1,20 @@
+{
+  "name": "zaificlaw",
+  "version": "1.0.0",
+  "description": "Zaifi Claw — Minimal AI Coding Assistant (like NanoClaw)",
+  "type": "module",
+  "bin": {
+    "zaificlaw": "./bin/zaificlaw.js"
+  },
+  "scripts": {
+    "start": "node bin/zaificlaw.js",
+    "ui": "node bin/zaificlaw.js --ui",
+    "setup": "node bin/zaificlaw.js --setup"
+  },
+  "keywords": ["ai", "cli", "coding-assistant", "gemini", "telegram", "nanoclaw"],
+  "author": "Zaifi",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

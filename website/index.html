@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaifi Claw — AI Coding Assistant</title>
+    <meta name="description"
+        content="Zaifi Claw is a minimal, secure, and free AI coding assistant that runs in your terminal. Like NanoClaw, but yours.">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+
+                <span>ZAIFI<span class="accent">CLAW</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#quickstart">Quick Start</a>
+                <a href="#architecture">Architecture</a>
+                <a href="https://github.com/MuhammadHuzaifaQureshi/zaifi-claw" target="_blank" class="nav-btn">
+                    ◉ GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">OPEN SOURCE • FREE • SECURE</div>
+            <h1 class="hero-title">
+                <span class="hero-brand">Zaifi Claw</span>
+            </h1>
+            <h2 class="hero-tagline">
+                Your personal AI agent.<br>
+                <span class="accent">Secure. Minimal. Yours.</span>
+            </h2>
+            <p class="hero-desc">
+                A lightweight AI coding assistant that runs in your terminal.
+                Read files, write code, execute commands — powered by Zaifi.
+            </p>
+            <div class="hero-actions">
+                <a href="#quickstart" class="btn-primary">
+                    Get Started
+                </a>
+                <a href="https://github.com/MuhammadHuzaifaQureshi/zaifi-claw" target="_blank" class="btn-secondary">
+                    View on GitHub
+                </a>
+            </div>
+            <div class="hero-install">
+                <code>npm install -g zaificlaw</code>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terminal Preview -->
+    <section class="terminal-section">
+        <div class="terminal">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">zaificlaw</span>
+            </div>
+            <div class="terminal-body">
+                <div class="term-line">
+                    <span class="term-prompt">$</span>
+                    <span class="term-cmd" id="typewriter">zaificlaw</span>
+                </div>
+                <div class="term-output">
+                    <pre class="term-ascii"><span class="accent">  ╔══════════════════════════════════════╗
+  ║                                      ║
+  ║   ⚡  Z A I F I  C L A W   v1.0     ║
+  ║      AI Coding Assistant             ║
+  ║                                      ║
+  ╚══════════════════════════════════════╝</span></pre>
+                </div>
+                <div class="term-line">
+                    <span class="term-accent">❯</span>
+                    <span class="term-user">Fix the authentication bug in login.js</span>
+                </div>
+                <div class="term-line dim">
+                    <span> 📂 Read: login.js (42 lines)</span>
+                </div>
+                <div class="term-line">
+                    <span class="term-ai"> ⚡ Found the issue on line 23. The token validation...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="section-inner">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>AI Chat in Terminal</h3>
+                    <p>Interactive AI assistant right in your terminal. Ask questions, get code, fix bugs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📂</div>
+                    <h3>Read & Write Files</h3>
+                    <p>AI can read your code, understand context, and create or edit files directly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Execute Commands</h3>
+                    <p>Run shell commands from within the chat. Build, test, deploy — all from one place.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Search Codebase</h3>
+                    <p>Search across your entire project for functions, variables, and patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Web Dashboard</h3>
+                    <p>Built-in web UI for managing settings, bot connections, and monitoring status.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Telegram Bot</h3>
+                    <p>Connect your Telegram bot and chat with Zaifi Claw from your phone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure</h3>
+                    <p>API keys stored locally. No telemetry. No data collection. 100% private.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Free</h3>
+                    <p>Powered by Google Gemini's free tier. No VPS, no subscriptions, no hidden costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="quickstart" id="quickstart">
+        <div class="section-inner">
+            <h2 class="section-title">Quick Start</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h3>Install</h3>
+                        <code>npm install -g zaificlaw</code>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h3>Setup API Key</h3>
+                        <code>zaificlaw --setup</code>
+                        <p>Get your free Gemini key from <a href="https://aistudio.google.com"
+                                target="_blank">aistudio.google.com</a></p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h3>Start Coding</h3>
+                        <code>cd my-project && zaificlaw</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="architecture" id="architecture">
+        <div class="section-inner">
+            <h2 class="section-title">Architecture</h2>
+            <div class="arch-grid">
+                <div class="arch-box">
+                    <span class="arch-label">CLI</span>
+                    <span class="arch-tech">Node.js</span>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-box">
+                    <span class="arch-label">AI Engine</span>
+                    <span class="arch-tech">Gemini API</span>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-box">
+                    <span class="arch-label">Tools</span>
+                    <span class="arch-tech">File I/O, Exec</span>
+                </div>
+            </div>
+            <div class="arch-stats">
+                <div class="arch-stat">
+                    <span class="arch-stat-value">~500</span>
+                    <span class="arch-stat-label">Lines of Code</span>
+                </div>
+                <div class="arch-stat">
+                    <span class="arch-stat-value">$0</span>
+                    <span class="arch-stat-label">Monthly Cost</span>
+                </div>
+                <div class="arch-stat">
+                    <span class="arch-stat-value">&lt;10MB</span>
+                    <span class="arch-stat-label">Memory Usage</span>
+                </div>
+                <div class="arch-stat">
+                    <span class="arch-stat-value">&lt;1s</span>
+                    <span class="arch-stat-label">Startup Time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>⚡ Zaifi Claw</span>
+            <span>Made for PIAIC/Panaversity</span>
+            <span>MIT License</span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
